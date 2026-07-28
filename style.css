@@ -1,0 +1,188 @@
+/* 洋食屋 鍵 — build.py が生成。直接編集しない */
+:root{
+  --bg:#fdfbf7; --fg:#2b2521; --muted:#736a61; --line:#e5ddd1;
+  --accent:#8c2f1f; --accent-soft:#f5ece4; --card:#fff;
+  --max:1040px;
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#181513; --fg:#efe8e0; --muted:#a89c90; --line:#332d28;
+         --accent:#e0836d; --accent-soft:#241c19; --card:#211c19; }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif JP",serif;
+  line-height:1.85; font-size:16px; letter-spacing:.02em;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2{line-height:1.5;font-weight:600;letter-spacing:.04em}
+
+/* header */
+header.site{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  max-width:var(--max);margin:0 auto;padding:20px 20px 14px;
+}
+.brand{text-decoration:none;display:flex;flex-direction:column;line-height:1.3}
+.brand-ja{font-size:20px;letter-spacing:.14em}
+.brand-en{font-size:10px;letter-spacing:.22em;color:var(--muted);font-family:system-ui,sans-serif}
+header.site nav{display:flex;gap:20px;font-size:14px}
+header.site nav a{text-decoration:none;color:var(--muted);padding-bottom:3px;border-bottom:1px solid transparent}
+header.site nav a:hover{color:var(--fg)}
+header.site nav a.on{color:var(--fg);border-bottom-color:var(--accent)}
+
+/* hero */
+.hero{max-width:var(--max);margin:8px auto 0;padding:0 20px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+.hero-img img{border-radius:3px;aspect-ratio:3/2;object-fit:cover}
+.hero-kicker{margin:0 0 10px;font-size:11.5px;letter-spacing:.2em;color:var(--accent);
+  font-family:system-ui,sans-serif}
+.hero-txt h1{font-size:34px;margin:0 0 18px;letter-spacing:.06em}
+.lead{color:var(--muted);margin:0 0 20px}
+.hero-hours{font-size:15px;margin:0 0 24px;font-family:system-ui,sans-serif;letter-spacing:.04em}
+.closed{color:var(--accent);font-size:13px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin:0}
+.btn{display:inline-block;text-decoration:none;padding:11px 26px;border-radius:2px;
+  font-size:14px;letter-spacing:.1em;background:var(--accent);color:#fff;border:1px solid var(--accent)}
+.btn-2{background:transparent;color:var(--accent)}
+.btn:hover{opacity:.87}
+
+/* 席なし告知 */
+.notice{max-width:var(--max);margin:44px auto 0;padding:20px 24px;
+  background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:2px}
+.notice p{margin:0}
+.n-head{font-weight:600;letter-spacing:.08em;margin-bottom:4px !important;color:var(--accent)}
+.notice p:not(.n-head){font-size:14.5px;color:var(--muted)}
+
+/* section 共通 */
+section{max-width:var(--max);margin:0 auto;padding:56px 20px 0}
+section h2{font-size:21px;letter-spacing:.12em;margin:0 0 26px;
+  padding-bottom:10px;border-bottom:1px solid var(--line)}
+.page-head{padding-top:24px}
+.page-head h1{font-size:28px;letter-spacing:.14em;margin:0 0 10px}
+
+/* 料理カード */
+.dish-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dish{margin:0}
+.dish img{border-radius:3px;aspect-ratio:3/2;object-fit:cover}
+.dish figcaption{padding-top:12px}
+.d-name{margin:0;font-size:16.5px;letter-spacing:.06em}
+.d-note{margin:2px 0 0;font-size:12.5px;color:var(--muted);line-height:1.7}
+.d-price{margin:8px 0 0;font-size:15px;font-family:system-ui,sans-serif}
+.d-tax{font-size:11px;color:var(--muted);margin-left:5px}
+.more{text-align:right;margin:22px 0 0;font-size:14px}
+
+/* 実績バー */
+.proof{padding-top:36px}
+.proof-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.pr-item{background:var(--bg);padding:18px 16px;text-align:center}
+.pr-label{margin:0;font-size:11px;letter-spacing:.16em;color:var(--muted);font-family:system-ui,sans-serif}
+.pr-value{margin:5px 0 3px;font-size:23px;letter-spacing:.04em;color:var(--accent)}
+.pr-note{margin:0;font-size:11.5px;color:var(--muted);line-height:1.6}
+.proof-cap{margin:12px 0 0;font-size:12px;color:var(--muted);text-align:center}
+
+/* 注文（店頭を主役に） */
+.order-main{background:var(--accent-soft);border:1px solid var(--accent);border-radius:3px;
+  padding:26px 28px;position:relative}
+.om-badge{position:absolute;top:-11px;left:24px;margin:0;background:var(--accent);color:#fff;
+  font-size:11px;letter-spacing:.14em;padding:3px 12px;border-radius:2px;font-family:system-ui,sans-serif}
+.om-kind{margin:4px 0 10px;font-size:19px;letter-spacing:.1em}
+.om-lead{margin:0 0 16px;font-size:14.5px;color:var(--muted);line-height:1.85}
+.om-lead strong{color:var(--fg);font-weight:600}
+.om-tel{margin:0 0 6px}
+.om-tel a{font-size:34px;letter-spacing:.03em;text-decoration:none;color:var(--accent);
+  font-family:system-ui,sans-serif}
+.om-hours{margin:0;font-size:12.5px;color:var(--muted);font-family:system-ui,sans-serif}
+.order-sub{margin-top:20px;background:var(--card);border:1px solid var(--line);
+  border-radius:3px;padding:22px 24px}
+.oc-kind{margin:0 0 10px;font-size:12px;letter-spacing:.18em;color:var(--muted);
+  font-family:system-ui,sans-serif}
+.oc-main{margin:0 0 10px}
+
+/* 蓋のメッセージ */
+.lid{padding-top:56px}
+.lid-inner{background:var(--card);border:1px solid var(--line);border-radius:3px;padding:34px 38px}
+.lid-inner h2{border:0;padding:0;margin:0 0 16px;font-size:20px}
+.lid-inner p{margin:0 0 14px;font-size:15px;color:var(--muted);line-height:2}
+.lid-inner p:last-child{margin-bottom:0}
+
+/* 時間帯 */
+.tb-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tb-card{border:1px solid var(--line);border-radius:3px;padding:22px 24px}
+.tb-time{margin:0;font-size:12px;letter-spacing:.14em;color:var(--accent);font-family:system-ui,sans-serif}
+.tb-name{margin:6px 0 8px;font-size:18px;letter-spacing:.1em}
+.tb-desc{margin:0 0 12px;font-size:13.5px;color:var(--muted);line-height:1.85}
+.tb-link{margin:0;font-size:13.5px}
+
+/* FAQ */
+.faq-list{display:grid;gap:0}
+.faq-item{padding:16px 0;border-top:1px solid var(--line)}
+.faq-q{margin:0 0 6px;font-size:15.5px;letter-spacing:.03em}
+.faq-q::before{content:"Q. ";color:var(--accent);font-family:system-ui,sans-serif}
+.faq-a{margin:0;font-size:14px;color:var(--muted);line-height:1.9}
+.pf-list{display:flex;flex-wrap:wrap;gap:9px}
+.pf{display:inline-block;padding:7px 15px;border:1px solid var(--line);border-radius:2px;
+  font-size:13.5px;text-decoration:none;font-family:system-ui,sans-serif}
+a.pf:hover{border-color:var(--accent);color:var(--accent)}
+.pf-nolink{color:var(--muted)}
+.oc-note{margin:0;font-size:12.5px;color:var(--muted);line-height:1.75}
+
+/* 店舗情報 */
+.info-dl{display:grid;grid-template-columns:120px 1fr;gap:0;margin:0;font-size:14.5px}
+.info-dl dt{padding:11px 0;color:var(--muted);border-top:1px solid var(--line);font-size:13px}
+.info-dl dd{padding:11px 0;margin:0;border-top:1px solid var(--line)}
+.map-link{margin:18px 0 0;font-size:14px}
+
+/* メニュー */
+.jump{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;margin-top:14px}
+.jump a{color:var(--muted)}
+.m-group{padding-top:44px}
+.m-time{font-size:12px;letter-spacing:.1em;color:var(--accent);margin-left:14px;
+  font-family:system-ui,sans-serif}
+.m-gnote{margin:-14px 0 18px;font-size:13px;color:var(--muted)}
+.m-list{list-style:none;margin:0;padding:0}
+.m-item{display:flex;align-items:baseline;gap:8px;padding:10px 0;border-bottom:1px dotted var(--line)}
+.m-name{flex:0 1 auto}
+.m-note{display:block;font-size:12px;color:var(--muted);line-height:1.6}
+.m-dots{flex:1 1 auto;min-width:16px}
+.m-price{flex:0 0 auto;font-family:system-ui,sans-serif;font-size:14.5px}
+.fn{margin:0;padding-left:1.2em;font-size:12.5px;color:var(--muted);line-height:2}
+
+/* about */
+.story{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:start;padding-top:24px}
+.story-txt p{margin:0 0 18px}
+.story-img{margin:0}
+.story-img img{border-radius:3px;aspect-ratio:3/2;object-fit:cover}
+.story-img figcaption{font-size:12px;color:var(--muted);padding-top:8px}
+.fact-list{list-style:none;margin:0;padding:0;font-size:14.5px}
+.fact-list li{padding:11px 0;border-top:1px solid var(--line)}
+.fact-list span{display:inline-block;min-width:150px;color:var(--muted);font-size:13px}
+
+/* footer */
+footer.site{max-width:var(--max);margin:80px auto 0;padding:34px 20px 40px;
+  border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.f-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+footer.site p{margin:0 0 10px;line-height:1.9}
+.f-name{font-size:16px;color:var(--fg);letter-spacing:.1em}
+.f-label{font-size:11px;letter-spacing:.16em;font-family:system-ui,sans-serif}
+.copy{margin-top:28px;font-size:11px;font-family:system-ui,sans-serif}
+br.sp{display:none}
+
+@media (max-width:760px){
+  body{font-size:15.5px}
+  .hero{grid-template-columns:1fr;gap:22px;padding-top:4px}
+  .hero-txt h1{font-size:27px}
+  .dish-grid{grid-template-columns:1fr;gap:28px}
+  .tb-grid{grid-template-columns:1fr}
+  .om-tel a{font-size:27px}
+  .order-main{padding:24px 20px}
+  .lid-inner{padding:26px 22px}
+  .story{grid-template-columns:1fr;gap:24px}
+  .f-grid{grid-template-columns:1fr;gap:22px}
+  .info-dl{grid-template-columns:96px 1fr;font-size:14px}
+  .fact-list span{min-width:0;display:block}
+  section{padding-top:44px}
+  br.sp{display:inline}
+}

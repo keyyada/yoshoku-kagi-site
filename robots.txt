@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yoshoku-kagi.com/sitemap.xml
