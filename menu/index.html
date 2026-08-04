@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>メニュー｜洋食屋 鍵（森下・テイクアウト／デリバリー）</title>
-<meta name="description" content="洋食屋 鍵のテイクアウトメニューと価格。生姜焼き850円、目玉焼きハンバーグ900円、dancyu掲載アジフライ650円ほか。昼限定定食は11:30〜14:00。表示はすべて税込の店頭お持ち帰り価格です。">
+<meta name="description" content="洋食屋 鍵のテイクアウトメニューと価格。ランチ（11:30–14:00）はごはん・お味噌汁付きの定食、ディナー（17:00–21:00）は生姜焼き850円・目玉焼きハンバーグ900円・dancyu掲載アジフライ650円などのおかず単品。表示はすべて税込の店頭お持ち帰り価格です。">
 <link rel="canonical" href="https://yoshoku-kagi.com/menu/">
 <meta property="og:type" content="restaurant">
 <meta property="og:title" content="メニュー｜洋食屋 鍵（森下・テイクアウト／デリバリー）">
-<meta property="og:description" content="洋食屋 鍵のテイクアウトメニューと価格。生姜焼き850円、目玉焼きハンバーグ900円、dancyu掲載アジフライ650円ほか。昼限定定食は11:30〜14:00。表示はすべて税込の店頭お持ち帰り価格です。">
+<meta property="og:description" content="洋食屋 鍵のテイクアウトメニューと価格。ランチ（11:30–14:00）はごはん・お味噌汁付きの定食、ディナー（17:00–21:00）は生姜焼き850円・目玉焼きハンバーグ900円・dancyu掲載アジフライ650円などのおかず単品。表示はすべて税込の店頭お持ち帰り価格です。">
 <meta property="og:url" content="https://yoshoku-kagi.com/menu/">
 <meta property="og:image" content="https://yoshoku-kagi.com/img/shogayaki.webp">
 <meta property="og:locale" content="ja_JP">
@@ -25,12 +25,17 @@
 <section class="page-head">
   <h1>メニュー</h1>
   <p class="lead">表示価格はすべて税込（軽減税率8%）の店頭お持ち帰り価格です。</p>
-  <nav class="jump"><a href="#lunch">ランチ 定食</a> <a href="#main">洋食メイン</a> <a href="#curry">カレー</a> <a href="#side">サイド</a> <a href="#drink">ドリンク</a></nav>
+  <nav class="jump"><span class="jump-band"><a class="jb-name" href="#lunch">ランチ</a><span class="jb-time">11:30–14:00</span><a href="#teishoku">定食</a></span><span class="jump-band"><a class="jb-name" href="#dinner">ディナー</a><span class="jb-time">17:00–21:00</span><a href="#main">洋食メイン</a>・<a href="#curry">カレー</a></span><span class="jump-band"><a class="jb-name" href="#allday">終日</a><span class="jb-time">11:30–14:00 ／ 17:00–21:00</span><a href="#side">サイド</a>・<a href="#drink">ドリンク</a></span></nav>
 </section>
 
-  <section class="m-group" id="lunch">
-    <h2>ランチ 定食<span class="m-time">11:30–14:00</span></h2>
-    <p class="m-gnote">ごはん・お味噌汁が付きます。ランチの時間帯だけのメニューです。</p>
+  <section class="m-band" id="lunch">
+    <p class="band-time">11:30–14:00</p>
+    <h2 class="band-name">ランチ</h2>
+    <p class="band-note">ごはん・お味噌汁が付く定食です。この時間帯だけのご提供です。</p>
+  </section>
+  <section class="m-group" id="teishoku">
+    <h3>定食</h3>
+    
     <ul class="m-list">
       <li class="m-item">
         <span class="m-name">生姜焼き定食<span class="m-note">昼のいちばん人気</span></span>
@@ -84,9 +89,14 @@
       </li>
     </ul>
   </section>
+  <section class="m-band" id="dinner">
+    <p class="band-time">17:00–21:00</p>
+    <h2 class="band-name">ディナー</h2>
+    <p class="band-note">おかず単品が中心です。この時間帯だけのご提供です。</p>
+  </section>
   <section class="m-group" id="main">
-    <h2>洋食メイン<span class="m-time">終日</span></h2>
-    <p class="m-gnote">おかず単品です。ごはんの量はお好みで選べます。</p>
+    <h3>洋食メイン</h3>
+    <p class="m-gnote">ごはんの量はお好みで選べます。</p>
     <ul class="m-list">
       <li class="m-item">
         <span class="m-name">アジフライ<span class="m-note">料理雑誌「dancyu」に掲載されました</span></span>
@@ -156,7 +166,7 @@
     </ul>
   </section>
   <section class="m-group" id="curry">
-    <h2>カレー<span class="m-time">終日</span></h2>
+    <h3>カレー</h3>
     
     <ul class="m-list">
       <li class="m-item">
@@ -171,8 +181,13 @@
       </li>
     </ul>
   </section>
+  <section class="m-band" id="allday">
+    <p class="band-time">11:30–14:00 ／ 17:00–21:00</p>
+    <h2 class="band-name">終日</h2>
+    <p class="band-note">どちらの時間帯でもご注文いただけます。</p>
+  </section>
   <section class="m-group" id="side">
-    <h2>サイド<span class="m-time">終日</span></h2>
+    <h3>サイド</h3>
     
     <ul class="m-list">
       <li class="m-item">
@@ -198,7 +213,7 @@
     </ul>
   </section>
   <section class="m-group" id="drink">
-    <h2>ドリンク<span class="m-time">終日</span></h2>
+    <h3>ドリンク</h3>
     
     <ul class="m-list">
       <li class="m-item">
@@ -226,6 +241,7 @@
 
 <section class="m-foot">
   <ul class="fn">
+<li>ランチの定食は 11:30–14:00、洋食メイン・カレーは 17:00–21:00 のみのご提供です。サイド・ドリンクはどちらの時間帯でもご注文いただけます。</li>
 <li>表示価格はすべて税込（軽減税率8%）の、店頭でお受け取りいただく場合の価格です。</li>
 <li>デリバリー各社での価格は配達手数料を含むため、店頭価格より高くなります。</li>
 <li>メインには、ライスの量やソースの追加などをお選びいただけます。</li>
