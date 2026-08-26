@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+<rect width="72" height="72" rx="14" fill="#f6f0e2"/>
+<g transform="rotate(-6 36 36)">
+<circle cx="36" cy="36" r="27" fill="none" stroke="#9d2c1c" stroke-width="3"/>
+<text x="36" y="39" text-anchor="middle" dominant-baseline="central"
+ font-family="Hiragino Mincho ProN,serif" font-size="30" font-weight="600" fill="#9d2c1c">鍵</text>
+</g></svg>
